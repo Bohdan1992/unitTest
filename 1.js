@@ -21,7 +21,21 @@ function load () {
     list(ol);
 }
 
-module.exports = list;
+module.exports.list = function (x) {
+    if (typeof array == 'object') {
+        var createList = array.map(function (item) {
+            var li = document.createElement('li');
+            li.innerHTML = item;
+            li.setAttribute('value', item);
+            // y.appendChild(li);
+            return x.appendChild(li);
+        })
+    }else {
+        alert('Not array');
+    }
+}
+
+
 
 
 
